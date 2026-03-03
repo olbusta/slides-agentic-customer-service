@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentation</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ── Global Header (populated by renderer.js from settings.js) ── -->
+    <div class="global-header" id="global-header"></div>
+
+    <!-- ── Slides (populated by renderer.js from data/slides.js) ──── -->
+    <div class="presentation-container" id="presentation-container"></div>
+
+    <!-- ── Navigation Controls ──────────────────────────────────────── -->
+    <div class="controls">
+      <button id="prev-btn" disabled>
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">…</span>
+      </div>
+      <button id="next-btn">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 18l6-6-6-6" stroke="#fff" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- ── Settings & Renderer ─────────────────────────────────────────── -->
+    <script src="settings.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+    <script src="js/renderer.js"></script>
+
+    <!-- ── Load YAML data and initialise ────────────────────────────────── -->
+    <script>
+      var dataFile = (window.PRESENTATION_SETTINGS && window.PRESENTATION_SETTINGS.dataFile)
+        || 'data/slides.yaml';
+      fetch(dataFile)
+        .then(function (r) { return r.text(); })
+        .then(function (text) {
+          var data = jsyaml.load(text);
+          var meta = data.meta || {};
+          // YAML meta overrides settings.js where provided
+          var settings = Object.assign({}, window.PRESENTATION_SETTINGS, {
+            title:  meta.title  || window.PRESENTATION_SETTINGS.title,
+            badge:  meta.audience || window.PRESENTATION_SETTINGS.badge,
+          });
+          window.initPresentation(settings, data.slides);
+        })
+        .catch(function (err) {
+          console.error('Could not load slides.yaml:', err);
+        });
+    </script>
+  </body>
+</html>

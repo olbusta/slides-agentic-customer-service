@@ -1,0 +1,8 @@
+# Video assets — too large for GitHub, keep locally
+assets/video/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
