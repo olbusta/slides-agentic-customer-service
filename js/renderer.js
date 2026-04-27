@@ -62,16 +62,16 @@
   /** type: title */
   function renderYamlTitle(slide) {
     var videoBg = slide.video ? `
-      <video autoplay muted loop playsinline
+      <video autoplay muted playsinline
         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none">
         <source src="${esc(slide.video)}">
       </video>
-      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.52);z-index:1"></div>` : "";
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.65);z-index:1"></div>` : "";
     var content = `
       <p class="step-label" style="color:rgba(255,255,255,0.5);letter-spacing:0.12em">${esc(slide.eyebrow)}</p>
       <h1 style="font-size:3rem;line-height:1.1;margin-top:0.5rem">${nl(slide.title)}</h1>
       <div class="divider divider--white" style="margin-top:1rem"></div>
-      <p style="color:rgba(255,255,255,0.55);font-size:1rem;margin-top:1rem">${esc(slide.body)}</p>`;
+      <p style="color:rgba(255,255,255,0.75);font-size:1.25rem;margin-top:1rem">${nl(slide.body)}</p>`;
     return slide.video
       ? videoBg + `<div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center">${content}</div>`
       : content;
@@ -80,12 +80,11 @@
   /** type: content — cards */
   function renderCards(slide) {
     var dark = isDark(slide.layout);
-    var iconColor = dark ? "#fff" : "#111";
     var cards = (slide.cards || []).map(function (c) {
       return `
         <div class="box${dark ? " box--dark" : ""}">
           <h3 style="${dark ? "color:#fff;" : ""}display:flex;align-items:center;gap:0.5rem">
-            ${iconSpan(c.icon, iconColor)} ${esc(c.title)}
+            ${esc(c.title)}
           </h3>
           <p style="${dark ? "color:rgba(255,255,255,0.65);" : ""}text-align:left;font-size:0.92rem">${esc(c.body)}</p>
         </div>`;
@@ -122,13 +121,12 @@
   /** type: content — steps */
   function renderSteps(slide) {
     var dark = isDark(slide.layout);
-    var iconColor = dark ? "#fff" : "#111";
     var steps = (slide.steps || []).map(function (s) {
       return `
         <div class="box${dark ? " box--dark" : ""}" style="padding-top:1.5rem">
           <div style="font-size:0.72rem;font-weight:800;letter-spacing:0.1em;color:${dark ? "rgba(255,255,255,0.3)" : "#bbb"};margin-bottom:0.4rem">${esc(s.number)}</div>
           <h3 style="${dark ? "color:#fff;" : ""}display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-            ${iconSpan(s.icon, iconColor)} ${esc(s.title)}
+            ${esc(s.title)}
           </h3>
           <p style="${dark ? "color:rgba(255,255,255,0.65);" : ""}text-align:left;font-size:0.92rem">${esc(s.body)}</p>
         </div>`;
@@ -144,12 +142,11 @@
   /** type: content — points (icon grid + quote) */
   function renderPoints(slide) {
     var dark = isDark(slide.layout);
-    var iconColor = dark ? "#fff" : "#111";
     var points = (slide.points || []).map(function (p) {
       return `
         <div class="box${dark ? " box--dark" : ""}">
           <h3 style="${dark ? "color:#fff;" : ""}text-align:left;display:flex;align-items:center;gap:0.5rem">
-            ${iconSpan(p.icon, iconColor)} ${esc(p.title)}
+            ${esc(p.title)}
           </h3>
           <p style="${dark ? "color:rgba(255,255,255,0.65);" : ""}text-align:left;font-size:0.92rem">${esc(p.body)}</p>
         </div>`;
@@ -209,7 +206,7 @@
       var borderStyle = (!item.style) ? `style="border-left:4px solid ${accentColor}"` : "";
       return `
         <div class="${boxClass}" ${borderStyle}>
-          <h3>${iconSpan(item.icon || "check", accentColor)} ${esc(item.title)}</h3>
+          <h3>${esc(item.title)}</h3>
           <p>${item.body}</p>
         </div>`;
     }).join("");
@@ -236,7 +233,7 @@
       <div style="max-width:780px;margin:1rem auto;width:100%">
         <div class="format-card">
           <div class="card-meta">${esc(card.meta)}</div>
-          <h3>${iconSpan(card.icon || "wrench", "#111")} ${esc(card.title)}</h3>
+          <h3>${esc(card.title)}</h3>
           <div class="card-details">${detailsHtml}</div>
           <p class="card-body">${esc(card.body)}</p>
         </div>
@@ -303,7 +300,6 @@
     var items = (slide.items || []).map(function (item) {
       return `
         <div class="box box--dark">
-          <div class="icon--lg" style="margin:0 auto 0.5rem">${icon(item.icon || "globe", "#fff")}</div>
           <h3 style="color:#fff">${esc(item.title)}</h3>
           <p style="font-size:0.88rem">${esc(item.body)}</p>
         </div>`;
