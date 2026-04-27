@@ -1,181 +1,101 @@
 meta:
-  title: "Building a Research mechanism"
-  subtitle: "Taking Back Control"
+  title: "Agentic Customer Service"
+  subtitle: "From Resolution to Relationship"
   audience: "DXD"
   theme:
-    style: "navy-teal"
-    note: "Dark navy background on title/dark slides, light grey on content slides, teal accent color throughout"
+    style: "black"
+    note: ""
 
 slides:
 
   - id: 1
     type: title
     layout: dark
-    video: "assets/video/9665235-hd_1920_1080_25fps.mp4"
-    eyebrow: "TAKING BACK CONTROL"
-    title: "From Data Chaos\nto Product Intelligence"
-    body: "Engineering & Product Leadership Review"
+    video: "assets/video/12336965-hd_1920_1028_60fps.mp4"
+    eyebrow: "AGENTIC CUSTOMER SERVICE"
+    title: "From Resolution to Relationship"
+    body: |-
+      Customer service is where the relationship lives, not just the transaction.      
+      That's the difference between damage control and trust-building.
 
   - id: 2
     type: content
     layout: light
-    section: "BACKGROUND"
-    title: "The Data Clarity Problem"
-    subtitle: "Today's analytics tools promise insight but deliver complexity."
+    section: "THE SHIFT"
+    title: "Today's service model is built around problems"
+    subtitle: "Agentic AI changes the premise entirely."
     cards:
-      - icon: layers
-        title: "Fragmented Tools"
-        body: "Power BI, Analytics, ContentSquare — each showing a different slice of truth. No single source of reality."
+      - icon: phone
+        title: "Reactive by Design"
+        body: "Customers reach out when something breaks. They wait, explain, get transferred, explain again. The burden is on them."
       - icon: user-slash
-        title: "Expert Dependency"
-        body: "Only data analysts can navigate dashboards. PMs and engineers wait in queue for answers to basic questions."
+        title: "No Relationship Memory"
+        body: "Every contact is a cold start. No context, no history, no continuity. A case number, not a person."
       - icon: warning
-        title: "Lagging Signals"
-        body: "By the time reports surface, the product has moved on. Insights are historical artefacts, not decision tools."
+        title: "Resolution Without Trust"
+        body: "Even when issues get resolved, the experience leaves customers feeling managed — not looked after."
+
+  - id: 3
+    type: content
+    layout: light
+    section: "THE NORTH STAR"
+    title: "Every Customer Should Feel Looked After"
+    subtitle: "Not just resolved. Looked after. Before they even know they need it."
+    points:
+      - icon: user-check
+        title: "No Cold Starts"
+        body: "Every interaction continues a relationship, not a new case number. The agent already knows who you are and what matters to you."
+      - icon: shield
+        title: "No Surprises"
+        body: "Customers are informed before frustration builds. Delays, issues, and exceptions are caught and communicated proactively."
+      - icon: heart
+        title: "Always Human When It Matters"
+        body: "Escalation is graceful, warm, and well-timed. The agent knows when to step back and let a person take over."
 
   - id: 4
     type: content
     layout: light
-    section: "BEYOND STATIC PAGES"
-    title: "Interfaces Should\nRespond to Users"
-    subtitle: "The era of one-size-fits-all dashboards is over. Data lets us build experiences that adapt."
+    section: "WHAT AGENTIC MEANS"
+    title: "An agentic system doesn't just respond"
+    subtitle: "It senses, decides, acts, and learns."
     points:
-      - icon: user-check
-        title: "Context-Aware"
-        body: "Surfaces that show the right information to the right person — not the same page for every role."
-      - icon: sliders
-        title: "Driven by Real Usage"
-        body: "When we own our data, we can shape the interface around how people actually use the product."
-      - icon: trending-up
-        title: "Continuously Improving"
-        body: "Static pages are built once and forgotten. Data-driven interfaces get better every release."
-
-  - id: 5
-    type: content
-    layout: light
-    section: "THE OPPORTUNITY"
-    title: "The Window\nIs Now"
-    subtitle: "AI amplifies teams that already have signal. Without data, it just moves faster in the wrong direction."
-    points:
-      - icon: database
-        title: "Data Informs Everything"
-        body: "Every product decision — what to build, what to drop, what to fix — gets sharper when it's grounded in real usage."
-      - icon: auto-awesome
-        title: "AI Needs Research to Work"
-        body: "AI is only as good as the context it gets. A team with owned data can prompt, automate, and build in ways others can't."
+      - icon: eye
+        title: "Sense"
+        body: "Reads signals across order data, delivery status, product history, and customer context — continuously, not just when asked."
       - icon: crosshair
-        title: "Position the Team"
-        body: "This is how we stop being reactive. Owning our data layer is how we show up as a team that leads with intelligence."
-
-  - id: 4
-    type: content
-    layout: light
-    section: "OWNING OUR DATA"
-    title: "We Start Small, We Move Fast"
-    subtitle: "We don't need a perfect data platform to begin — we need ownership and momentum."
-    points:
-      - icon: seedling
-        title: "Start Small"
-        body: "We begin by collecting our own data now — no big platform migrations, no waiting for perfect infrastructure."
-      - icon: trending-up
-        title: "Intelligence Over Intuition"
-        body: "Strong opinions are good. Strong opinions backed by data are better. We add signal to every call we make."
-      - icon: user-check
-        title: "UX Research at the Centre"
-        body: "This isn't just engineering infra — UX Research drives what we measure, what we learn, and where we go next."
+        title: "Decide"
+        body: "Determines the right action without waiting to be prompted. It knows what it can handle and what needs a human."
+      - icon: bolt
+        title: "Act"
+        body: "Resolves, escalates, compensates, or follows up — end to end. No handoff gaps, no dead ends."
       - icon: loop
-        title: "Feedback Loops"
-        body: "Every release feeds back into the data. We learn faster with each cycle and compound that over time."
+        title: "Learn"
+        body: "Improves its judgment with every interaction. The system gets better the more it serves."
 
   - id: 5
     type: content
     layout: light
-    section: "THE LOOP"
-    title: "Collect → Distill → Improve"
-    subtitle: "A continuous intelligence flywheel that compounds product quality over time."
+    section: "THREE MODES"
+    title: "Most journeys move fluidly across these three modes."
+    subtitle: "Not all agentic service looks the same."
     steps:
       - number: "01"
-        icon: database
-        title: "Collect"
-        body: "Capture user events, errors, performance signals into our own data layer — structured, versioned, owned."
+        icon: user-check
+        title: "Assistive"
+        body: "The agent supports a human agent or customer with information, suggestions, and next steps. Human remains in control."
       - number: "02"
-        icon: chart-line
-        title: "Distill Insights"
-        body: "Transform raw events into actionable product signals: retention patterns, friction points, feature adoption."
+        icon: trending-up
+        title: "Proactive"
+        body: "The agent detects a signal and reaches out — a delivery exception, a recall, an assembly issue. Action happens before the customer asks."
       - number: "03"
         icon: rocket
-        title: "Improve Product"
-        body: "Feed insights directly into the roadmap. Every sprint is informed by real usage — not intuition or guesswork."
+        title: "Autonomous"
+        body: "The agent resolves end to end. Books, compensates, reorders, follows up. No human needed unless the customer wants one."
 
   - id: 6
-    type: closing
-    layout: dark
-    eyebrow: "Let's align on next steps"
-    title: "How do we get started?"
-    actions:
-      - number: 1
-        text: "Define 1 core product questions we need data to answer"
-      - number: 2
-        text: "Agree on data ownership model and where we centralize"
-      - number: 3
-        text: "Start working on it as soon as we can"        
-
-  - id: 7
-    type: content
-    layout: light
-    section: "WHERE WE START"
-    title: "Order Action as\nOur First Resarch Signal"
-    subtitle: "We don't need to boil the ocean. Order Action is a known problem with a clear data story waiting to be told."
-    points:
-      - icon: crosshair
-        title: "A Known Problem"
-        body: "Order Action has friction we've felt but never measured. This is our chance to stop guessing and start knowing."
-      - icon: database
-        title: "A Clean Data Opportunity"
-        body: "The events are there to capture. User actions, drop-offs, error states — structured, owned, queryable by us."
-      - icon: seedling
-        title: "Small Enough to Start"
-        body: "This isn't a platform migration. It's one flow, one data layer, one feedback loop. The perfect first step."
-      - icon: bolt
-        title: "Fast Enough to Learn"
-        body: "A tight scope means we see results quickly — and build the muscle for every feature that comes after."
-
-  - id: 8
-    type: closing
-    layout: dark
-    eyebrow: "WHERE WE START"
-    title: "Order Action:\nLet's Make It Real"
-    actions:
-      - number: 1
-        text: "Log all action clicks to a GCP Bucket — same approach as smiley feedback"
-      - number: 2
-        text: "Cap at 20k clicks for now, exportable as JSON for easy access"
-      - number: 3
-        text: "UX analyses the data, identifies patterns, feeds findings into the roadmap"
-
-  - id: 9
-    type: content
-    layout: light
-    section: "WHERE WE START"
-    title: "Control When\nWe Listen"
-    subtitle: "Logging everything all the time isn't the goal — the goal is collecting the right data at the right moment."
-    points:
-      - icon: shield
-        title: "Collect With Intent"
-        body: "We only log when we have a research question to answer. No data debt, no noise, no storing what we can't handle."
-      - icon: user-check
-        title: "UX Research-Led"
-        body: "UX defines when logging goes live — tied to a study, a hypothesis, a sprint. Data collection becomes a research act."
-      - icon: loop
-        title: "Repeatable by Design"
-        body: "Turn it on, gather signal, turn it off, analyse. A lightweight rhythm we can run as often as we need."
-      - icon: sliders
-        title: "Flagga-Controlled"
-        body: "We add a toggle in Flagga to turn logging on and off — no deploys, no tickets, just a switch we own."
-
-  - id: 10
     type: title
     layout: dark
     eyebrow: "OPEN DISCUSSION"
-    title: "What do you think?"
+    title: "What Are Your Thoughts?"
     body: "How do you see this from your perspective? What would you add, challenge, or do differently?"
+
