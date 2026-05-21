@@ -378,41 +378,7 @@
       container.appendChild(div);
     });
 
-    var slides  = container.querySelectorAll(".slide");
-    var total   = slides.length;
-    var current = 0;
-    var prevBtn    = document.getElementById("prev-btn");
-    var nextBtn    = document.getElementById("next-btn");
-    var currentNum = document.getElementById("current-slide");
-    var totalNum   = document.getElementById("total-slides");
-
-    totalNum.textContent = total;
-
-    function show(index) {
-      slides.forEach(function (s, i) {
-        s.classList.remove("active", "prev");
-        if (i === index)    s.classList.add("active");
-        else if (i < index) s.classList.add("prev");
-      });
-      currentNum.textContent = index + 1;
-      prevBtn.disabled = index === 0;
-      nextBtn.disabled = index === total - 1;
-    }
-
-    function next() { if (current < total - 1) show(++current); }
-    function prev() { if (current > 0) show(--current); }
-
-    nextBtn.addEventListener("click", next);
-    prevBtn.addEventListener("click", prev);
-
-    if (settings.keyboardNav !== false) {
-      window.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
-        else if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
-      });
-    }
-
-    show(0);
+    // Scroll mode: all slides visible, no navigation needed
     window.focus();
   }
 
