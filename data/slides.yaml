@@ -95,6 +95,69 @@ slides:
   - id: 6
     type: title
     layout: dark
+    eyebrow: "RCMP AGENTIC IDEAS"
+    title: "What Can This Look Like in Reality?"
+    body: "4 concrete scenarios that show agentic customer service in action."
+
+  - id: 7
+    type: content
+    layout: light
+    section: "IDEA 1 — PROACTIVE"
+    title: "Pre-delivery Exception"
+    subtitle: "The agent reaches out before Sarah even notices."
+    points:
+      - icon: package
+        title: "The Scenario"
+        body: "A stock issue is flagged before Sarah notices. The RCMP agent reaches out, explains the delay, and offers an alternative that ships on time. She never has to call."
+      - icon: trending-up
+        title: "The Value"
+        body: "Fewer inbound contacts, fewer cancellations, higher NPS. Directly reduces contact volume and protects conversion."
+
+  - id: 8
+    type: content
+    layout: light
+    section: "IDEA 2 — ASSISTIVE"
+    title: "Assembly Escalation"
+    subtitle: "The agent steps in when help is needed most."
+    points:
+      - icon: tool
+        title: "The Scenario"
+        body: "Sarah has been stuck on the same AR assembly step for 8+ minutes. The agent steps in: 'This one trips a lot of people up — want me to connect you with someone who can walk you through it live?' One tap, live support."
+      - icon: users
+        title: "The Value"
+        body: "Shows the full assistive → proactive → human arc in a single moment. Requires live agent availability and real-time AR behaviour tracking."
+
+  - id: 9
+    type: content
+    layout: light
+    section: "IDEA 3 — PROACTIVE"
+    title: "The 6-Month Proactive Replace"
+    subtitle: "Resolve a complaint before it exists."
+    points:
+      - icon: shield
+        title: "The Scenario"
+        body: "The agent has flagged a known seam issue on Sarah's sofa cover model. Before she experiences it: 'A small number of customers with your cover have reported an issue. We've looked at your purchase — if you're seeing this, we'll replace it.'"
+      - icon: heart
+        title: "The Value"
+        body: "The most trust-building moment in the journey. High emotional impact — best for the vision narrative."
+
+  - id: 10
+    type: content
+    layout: light
+    section: "IDEA 4 — ASSISTIVE"
+    title: "The Missing Item Catch"
+    subtitle: "A genuine catch, not a push."
+    points:
+      - icon: search
+        title: "The Scenario"
+        body: "Sarah finishes her store visit and orders that evening. The agent cross-references her room design against her basket — the rug she planned around isn't in the order. 'Looks like your rug isn't in your basket — want to add it?'"
+      - icon: dollar-sign
+        title: "The Value"
+        body: "Quick win — relatively simple to implement, clear revenue upside, feels helpful not pushy. Incremental revenue with real customer value behind it."
+
+  - id: 11
+    type: title
+    layout: dark
     eyebrow: "OPEN DISCUSSION"
     title: "What Are Your Thoughts?"
     body: "How do you see this from your perspective? What would you add, challenge, or do differently?"

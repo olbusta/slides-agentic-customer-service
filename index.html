@@ -41,7 +41,11 @@
     <script>
       var dataFile = (window.PRESENTATION_SETTINGS && window.PRESENTATION_SETTINGS.dataFile)
         || 'data/slides.yaml';
-      fetch(dataFile)
+      // Add cache buster to force fresh fetch on every page load
+      var separator = dataFile.indexOf('?') > -1 ? '&' : '?';
+      var bustedUrl = dataFile + separator + 't=' + Date.now();
+      
+      fetch(bustedUrl)
         .then(function (r) { return r.text(); })
         .then(function (text) {
           var data = jsyaml.load(text);

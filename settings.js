@@ -13,6 +13,9 @@ window.PRESENTATION_SETTINGS = {
   /** Fallback badge text (overridden by YAML meta.audience) */
   badge: "",
 
+  /** Author name shown in the top-right header */
+  author: "Olof Bustamante",
+
   /**
    * Active data file.
    * Point this at any YAML file in data/ — index.html reads it.

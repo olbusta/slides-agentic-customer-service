@@ -1,0 +1,21 @@
+# Backup of Slide 6 — Next Steps (archived for later use)
+
+  - id: 6
+    type: content
+    layout: light
+    section: "NEXT STEPS"
+    title: "How Do We Make This Real?"
+    subtitle: "Start with delivery exceptions — when something doesn't go as planned."
+    steps:
+      - number: "01"
+        icon: warning
+        title: "What's an Exception?"
+        body: "A delay, damage, missing item, or anything unexpected that disrupts the expected delivery. The moment the customer needs us most."
+      - number: "02"
+        icon: lightbulb
+        title: "Map the Flow"
+        body: "Understand how exceptions are currently handled. Where are the gaps? Where can the agent intercept and improve the experience?"
+      - number: "03"
+        icon: star
+        title: "Build the Vision"
+        body: "Create a storyboard or prototype showing the agentic experience — proactive outreach, transparent resolution, rebuilt trust."

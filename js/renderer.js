@@ -94,7 +94,7 @@
       <h2${dark ? " style=\"color:#fff\"" : ""}>${esc(slide.title)}</h2>
       <div class="divider${dark ? " divider--white" : ""}"></div>
       <p style="${dark ? "color:rgba(255,255,255,0.7);" : ""}margin-bottom:1rem">${esc(slide.subtitle)}</p>
-      <div class="${(slide.cards || []).length === 4 ? 'grid grid--2' : 'grid grid--3'}" style="margin-top:0.5rem;max-width:960px">${cards}</div>`;
+      <div class="${(slide.cards || []).length === 4 ? 'grid grid--2' : 'grid grid--3'}" style="margin-top:0.5rem">${cards}</div>`;
   }
 
   /** type: content — comparison */
@@ -136,7 +136,7 @@
       <h2${dark ? " style=\"color:#fff\"" : ""}>${esc(slide.title)}</h2>
       <div class="divider${dark ? " divider--white" : ""}"></div>
       <p style="${dark ? "color:rgba(255,255,255,0.65);" : ""}margin-bottom:1.25rem">${esc(slide.subtitle)}</p>
-      <div class="grid grid--3" style="max-width:960px">${steps}</div>`;
+      <div class="grid grid--3">${steps}</div>`;
   }
 
   /** type: content — points (icon grid + quote) */
@@ -159,7 +159,7 @@
       <h2 style="${dark ? "color:#fff;" : ""}text-align:center">${nl(slide.title)}</h2>
       <div class="divider${dark ? " divider--white" : ""}"></div>
       ${quoteHtml}
-      <div class="${(slide.points || []).length === 4 ? 'grid grid--2' : 'grid grid--3'}" style="max-width:960px">${points}</div>`;
+      <div class="${(slide.points || []).length === 3 ? 'grid grid--3' : 'grid grid--2'}">${points}</div>`;
   }
 
   /** type: closing */
@@ -361,8 +361,11 @@
     var header = document.getElementById("global-header");
     if (header) {
       header.innerHTML =
+        `<div class="header-left">` +
         `<div class="header-title">${esc(settings.title || "Presentation")}</div>` +
-        (settings.badge ? `<div class="header-badge">${esc(settings.badge)}</div>` : "");
+        (settings.badge ? `<div class="header-badge">${esc(settings.badge)}</div>` : "") +
+        `</div>` +
+        (settings.author ? `<div class="header-right"><div class="header-author">${esc(settings.author)}</div></div>` : "");
     }
 
     var container = document.getElementById("presentation-container");
