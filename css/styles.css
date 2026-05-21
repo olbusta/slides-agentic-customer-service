@@ -11,6 +11,11 @@
 }
 
 /* ── Typography ─────────────────────────────────────────────── */
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto IKEA", "Noto Sans", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
@@ -180,11 +185,10 @@ p {
   align-items: center;
   padding: 5rem 4rem 4rem;
   background: #ffffff;
-}.slide + .slide {
+  scroll-snap-align: start;
+}
+.slide + .slide {
   border-top: 1px solid #eee;
-}.slide.active,
-.slide.prev {
-  /* No transforms in scroll mode */
 }
 
 /* Dark background variant */
